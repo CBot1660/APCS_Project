@@ -21,7 +21,7 @@
         android:layout_height="87dp"
         android:layout_x="45dp"
         android:layout_y="62dp"
-        android:text="Not Galaga!"
+        android:text="ForestShooting!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="36sp"
