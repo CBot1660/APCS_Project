@@ -1,17 +1,13 @@
-package fda.christopher.galaga;
+package fda.christopher.Space_Shooter;
 
-import android.media.Image;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 public class Game_Screen extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,15 +18,17 @@ public class Game_Screen extends AppCompatActivity {
         Button leftButton = (Button) findViewById(R.id.leftButton);
         Button rightButton = (Button) findViewById(R.id.rightButton);
         Button pewPew = (Button) findViewById(R.id.pewPew);
+
         final Handler handler = new Handler();
         final Runnable instructions = new Runnable() {
             @Override
             public void run() {
-                bullet.setY(bullet.getY()-5);
-                if(bullet.getY() > 0){
+                bullet.setY(bullet.getY() - 5);
+                if (bullet.getY() > 0) {
                     handler.post(this);
                 }
-                if((nana.getY() < bullet.getY() && nana.getY()+nana.getHeight() > bullet.getY())&&((nana.getX() < bullet.getX()) && (nana.getX()+nana.getWidth() > bullet.getX()))){
+                if ((nana.getY() < bullet.getY() && nana.getY() + nana.getHeight() > bullet.getY())
+                        && ((nana.getX() < bullet.getX()) && (nana.getX() + nana.getWidth() > bullet.getX()))) {
                     nana.setImageResource(android.R.color.transparent);
                 }
 
@@ -38,24 +36,26 @@ public class Game_Screen extends AppCompatActivity {
         };
 
 
-        leftButton.setOnClickListener(new View.OnClickListener(){
+        leftButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                character.setX(character.getX()-5);
+                character.setX(character.getX() - 5);
             }
         });
-        rightButton.setOnClickListener(new View.OnClickListener(){
+
+        rightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                character.setX(character.getX()+5);
+                character.setX(character.getX() + 5);
             }
         });
-        pewPew.setOnClickListener(new View.OnClickListener(){
+        pewPew.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 bullet.setY(character.getY());
-                bullet.setX(character.getX()+ character.getWidth()/2-bullet.getWidth()/2);
+                bullet.setX(character.getX() + character.getWidth() / 2 - bullet.getWidth() / 2);
                 handler.post(instructions);
             }
         });

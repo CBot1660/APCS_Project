@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="fda.christopher.galaga.MainActivity">
+    tools:context="fda.christopher.Space_Shooter.MainActivity">
 
     <Button
         android:id="@+id/button"
@@ -21,7 +21,7 @@
         android:layout_height="87dp"
         android:layout_x="45dp"
         android:layout_y="62dp"
-        android:text="ForestShooting!"
+        android:text="Space Shooter!"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="36sp"

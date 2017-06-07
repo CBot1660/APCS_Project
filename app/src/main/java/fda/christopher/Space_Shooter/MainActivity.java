@@ -1,4 +1,4 @@
-package fda.christopher.galaga;
+package fda.christopher.Space_Shooter;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button button = (Button) findViewById(R.id.button);
-       final TextView text = (TextView) findViewById(R.id.textView);
+        final TextView text = (TextView) findViewById(R.id.textView);
         final Intent gameScreen = new Intent(this,Game_Screen.class);
         button.setOnClickListener(new View.OnClickListener() {
             @Override

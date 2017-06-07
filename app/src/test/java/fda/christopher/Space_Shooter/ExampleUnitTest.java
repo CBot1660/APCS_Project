@@ -1,4 +1,4 @@
-package fda.christopher.galaga;
+package fda.christopher.Space_Shooter;
 
 import org.junit.Test;
 
